@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+#gameContainer {
+  padding-top: 5vh;
+  text-align: center;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#gameBoard {
+  background-color: black;
+  border: 2px solid white;
+}
+
+#gameScore {
+  font-size: 5rem;
+  color: white;
+}
+
+#resetBtn {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#highScore {
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0.7rem;
+}
+
+/* arrow buttons */
+.arrow-container {
+  position: relative;
+  height: 11rem;
+  width: 12rem;
+  margin: auto;
+  display: none;
+  margin-top: 5vh;
+}
+
+.arrow-button {
+  font-size: 20px;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.top {
+  transform: rotate(0deg);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  transform: rotate(270deg);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.down {
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  transform: rotate(90deg);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* change screen formate when screen size less than 500px */
+@media screen and (max-width: 500px) {
+  .arrow-container {
+    display: block;
+  }
+  #gameScore {
+    position: absolute;
+    top: -2rem;
+    font-size: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #gameContainer {
+    margin-top: 5vh;
+  }
+  #resetBtn {
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+    top: -1rem;
+    border-radius: 0.4rem;
+  }
+  #gameBoard {
+    margin-top: 2vh;
+  }
+}
